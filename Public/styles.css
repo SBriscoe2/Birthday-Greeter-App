@@ -1,0 +1,68 @@
+nav  {
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 70px;
+  position: relative;
+  top:  0px;
+  }
+
+nav {
+  background-color: rgba(0,0,0,0.6);
+}
+
+ul {
+  list-style-type: none;
+  color: white;
+  margin: 0;
+  padding: 0;
+  }
+
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-color: light cyan;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url("https://images.pexels.com/photos/40183/birthday-cake-cake-birthday-cupcakes-40183.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  font-family: "Verdana", sans-serif;
+  color: white;
+  margin: 0;
+
+}
+
+body {
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 40px;
+}
+
+ul li {
+  display: inline;
+  text-align: center;
+  }
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+main {
+  text-align: center;
+}
+
+a {
+  color: white;
+}
+
+button {
+  text-align: center;
+  background-color: orange;
+  color: white;
+  font-size: 30px;
+  padding-top: 10px;
+}

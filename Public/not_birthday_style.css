@@ -1,0 +1,20 @@
+body {
+  background-color: lightgrey;
+  background-image: url("https://images.pexels.com/photos/1663421/pexels-photo-1663421.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-repeat: no-repeat;
+  background-size: 1500px 900px;
+  background-position: center top;
+  text-align: center;
+  font-family: "Verdana", sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

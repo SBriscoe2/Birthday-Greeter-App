@@ -1,19 +1,23 @@
 require 'sinatra'
-require './lib/birthday_greeter'
+require 'date'
+# require './lib/birthday_greeter'
 
 class Birth < Sinatra::Base
   enable :sessions
 
   get '/' do
     erb(:index)
+  end
 
+  get '/info' do
+    erb(:user_info)
   end
 
   post '/nameform' do
     session[:name] = params[:name]
     session[:date] = params[:date]
     session[:month] = params[:month]
-    session[:year] = params[:month]
+    session[:year] = params[:year]
     redirect('/birthday')
   end
 
@@ -22,9 +26,16 @@ class Birth < Sinatra::Base
     @date = session[:date]
     @month = session[:month]
     @year = session[:year]
-    @today_date = User.new.today_date
-    @message = User.new.check_birthday
+    @todays_date = Date.today
+    @user_birthday = Date.new(Date.today.year,@month.to_i,@date.to_i)
+    start_date = Date.parse @user_birthday.to_s
+    end_date =  Date.parse @todays_date.to_s
+    y = start_date - end_date
+    @x = y.to_i
     erb(:birthday)
   end
+
+  get '/nobirthday' do
+    erb(:not_birthday)
+  end
 end
-# (Date.new(Date.today.year,@month.to_i,@date.to_i

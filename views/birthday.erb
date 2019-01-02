@@ -3,20 +3,25 @@
   <head>
     <meta charset="UTF-8">
     <title>Birthday Today</title>
+    <link rel="stylesheet" text="text/css" href ="/birthday_style.css">
   <head>
 
-<body bgcolor="#FBF49D">
-  
+<body>
   <% if @today_date == @today_date %>
     <h1> 'Happy Birthday day to you' </h1>
     <h1> 'Happy Birthday day to you' </h1>
-    <h1> 'Happy Birthday, <%= @name %>' </h1>
+    <h1> 'Happy Birthday dear, <%= @name %>' </h1>
     <h1> 'Happy Birthday to you' </h1>
   <% end %>
-
-  <% if @today_date == @today_date %>
-    <%= @message %>
-  <% end %>
-
 </body>
+<%= @todays_date %><br>
+<%= @user_birthday %><br>
+<%= @birthday_check %><br>
+<%= @x %>
+
+<footer>
+  <ul>
+    <a href="./">Home</a>
+  </ul>
+</footer>
 </html>

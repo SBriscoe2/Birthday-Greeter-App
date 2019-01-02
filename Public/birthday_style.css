@@ -1,0 +1,18 @@
+body {
+  background-image: url("https://images.pexels.com/photos/913136/pexels-photo-913136.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  font-family: "Verdana", sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

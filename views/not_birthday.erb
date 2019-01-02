@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Not Yet</title>
+    <link rel="stylesheet" text="text/css" href ="/not_birthday_style.css">
+  </head>
+
+  <body>
+    <h1>
+      <% if @today_date == @today_date %>
+      It's not your birthday yet!<br>
+      Only <%= @days_left%> days left!<br>
+      Here's a little something to make you feel better!
+      <% end %>
+    </h1>
+  </body>
+
+  <footer>
+    <ul>
+      <a href="./">Home</a>
+    </ul>
+  </footer>
+</html>
