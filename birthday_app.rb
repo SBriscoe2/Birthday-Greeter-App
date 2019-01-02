@@ -17,25 +17,30 @@ class Birth < Sinatra::Base
     session[:name] = params[:name]
     session[:date] = params[:date]
     session[:month] = params[:month]
-    session[:year] = params[:year]
-    redirect('/birthday')
+    redirect('/nobirthday')
   end
 
   get '/birthday' do
     @name = session[:name]
+    erb(:birthday)
+  end
+
+  get '/nobirthday' do
+    @name = session[:name]
     @date = session[:date]
     @month = session[:month]
-    @year = session[:year]
     @todays_date = Date.today
     @user_birthday = Date.new(Date.today.year,@month.to_i,@date.to_i)
     start_date = Date.parse @user_birthday.to_s
     end_date =  Date.parse @todays_date.to_s
     y = start_date - end_date
-    @x = y.to_i
-    erb(:birthday)
-  end
-
-  get '/nobirthday' do
+    if y == 0
+      redirect('/birthday')
+    else
+    @days_left = y.to_i
+    end
     erb(:not_birthday)
   end
+
+
 end
